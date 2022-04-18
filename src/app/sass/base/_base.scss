@@ -1,0 +1,77 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+
+  margin: 0 5vw;
+
+  line-height: 1.7;
+  color: $color-text-base;
+  padding: 1vw;
+
+  @include respond(tab-port) {
+    margin: 0 3vw;
+    padding: 0rem;
+    padding-top: 1vh;
+  }
+
+  @include respond(phone) {
+    margin: 0;
+    padding: 0rem;
+    padding-top: 1vh;
+  }
+}
+
+html{
+  height: 100%;
+  width: 100vw;
+
+  background-color: $color-primary-light;
+  font-size: 62.5%;
+  @include respond(big-desktop) { font-size: $bp-largest; }
+  @include respond(tab-land) { font-size: $bp-large; }
+  @include respond(tab-port) { font-size: $bp-medium;  }
+  @include respond(phone) { font-size: $bp-small;  }
+}
+
+.base {
+  height: 90vh;
+  width: 85vw;
+
+  grid-column: 2/3;
+  position: relative;
+  display: grid;
+  grid-template-columns: max-content 1fr 2vw;
+  
+
+  justify-items: center;
+  background-color: $color-primary-light;
+  font-size: 1 rem;
+
+  @include respond(phone) {
+    grid-template-columns: 98vw;
+    grid-template-rows: max-content;
+  }
+  &-right, &-left {
+    background-color: $color-primary-dark;
+  }
+  &-right {
+    width: 100%;
+    grid-column: 3/4;
+    grid-row: 1/-1;
+  }
+
+  &-left {
+    
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+
+
+}

@@ -1,0 +1,44 @@
+<div class="paragraphs">
+    <app-title title="6. Digitale handtekening"></app-title>
+    <div class="paragraphs-content">
+      <p>Deze opgave demonstreert hoe een digitale handtekening kan worden toegevoegd aan een file.</p>
+      <p> De demonstratie gebruikt de flowchart die in Figuur 6 is gegeven.</p> 
+      <div class="columns">
+        <div class="columns-left">
+          <img src= "assets/images/signature_flowchart.png" alt="signature" class="figure" >
+          <p class="figure"> Figuur 6  Flowchart voor toevoegen van een digitale handtekening</p>     
+        </div>
+        <div class="columns-right">
+          <br>
+          <ol style="list-style-position: inside;">De hoofdlijnen zijn
+            <li>Open document</li>
+            <li>Document</li>
+            <li>Bereken een hash value</li>
+            <li>Encrypt hash value</li>
+            <li>Genereer handtekening</li>
+            <li>Sla de handtekening op</li>
+          </ol>
+          <br>
+          <p>Tijdens de demonstratie kleuren deze stappen 
+            <span style="color:blue">blauw</span> 
+            en als ze afgehandeld zijn kleuren ze 
+            <span style="color:green">groen</span>.</p>
+          <p>Voor stap 3, 4 en 5 is invoer vereist via de 
+           <span style="color:red">rode</span> hexagons. Die moeten dus eerst uitgevoerd worden.</p>
+        </div>
+      </div>
+      <p class="opgave">Opgave 7</p>
+      <p>a) Genereer de digitale handtekening</p>
+      <p class="warning">Open vooraf een willekeurig bestand</p> 
+      <p class="order">Selecteer in menu 'Digital Signature/PKI' >
+        'Signature Demonstration (Signature Generation)...'.</p>
+      <p class="warning">Kies bij stap 3 de cryptografische hashfunctie SHA-1</p>
+      <p class="warning">Laat bij stap 4 de hash code berekenen</p>
+      <p class="warning">Laat bij stap 4 de RSA key berekenen. Laat de hiervoor benodigde priemgetallen genereren</p>
+      <p class="warning">Let bij stap 5 goed op welke velden verplicht zijn</p>
+      <br>
+      <p>b) Verifieer de digitale handtekening</p>
+      <p class="order">Selecteer in menu 'Digital Signature/PKI' > 'Verify Signature...'</p>
+    </div>
+    <app-tabs prevPar="/paragraphs/par5" nextPar="/paragraphs/par7"></app-tabs>
+  </div>

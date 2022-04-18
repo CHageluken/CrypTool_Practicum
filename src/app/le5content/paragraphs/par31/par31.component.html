@@ -1,0 +1,61 @@
+<div class="paragraphs">
+    <app-title title="3.1. Vigenère encryptie"></app-title>
+    <div class="paragraphs-content">
+        <p>Bij encryptie volgens Vigenère hebben we te maken met een sleutel van lengte <em>p</em> (ook wel periode genoemd).</p>
+        <p>Dat betekent dat er sprake is van een reeks van <em>p</em> verschillende (Caesar-)verschuivingen.</p>
+        <p>De tekst wordt daarmee opgedeeld in groepen van <em>p</em> letters. </p> 
+        <p>De eerste letters in deze groepen hebben eenzelfde verschuiving.</p>
+        <p>Ook de tweede letters in deze groepen hebben eenzelfde verschuiving, enzovoort.</p>
+        <p> In het algemeen geldt dat de <em>n</em>&#8209;de 
+        letters in deze groepen (met <em>1 ≤ n ≤ p</em>) steeds eenzelfde verschuiving hebben.</p>
+        <p>Dit maakt een Vigenèrecijfer kwetsbaar voor frequentieanalyse.</p>
+        <img src= "assets/images/le5_viginere.png" alt="viginere" class="figure" >
+        <p class="figure"> Figuur 2  Voorbeeld van Viginère versleuteling met <em>p = 5</em></p>
+        <p>Om een Vigenèrecijfer te kraken, kiezen we een willekeurige periode <em>p</em>.</p>
+        <p>We bepalen vervolgens de frequentieverdeling van de eerste letters in de groepen.</p>
+        <p>Die kunnen we met de frequentieverdeling van letters in een referentietekst vergelijken.</p>
+        <p>Als we de frequentieverdelingen weergeven in histogrammen, kunnen we ze gemakkelijk vergelijken.</p>
+        <p>Als de gekozen periode onjuist is, zal het histogram voor de vercijferde tekst veel vlakker zijn dan het histogram voor de referentietekst.</p>
+        <p>In dat geval proberen we een andere periode.</p>
+        <p>Als de periode wel correct lijkt, kunnen we de verschuiving voor de eerste letters bepalen.</p>
+        <p>Hetzelfde kunnen we herhalen voor de volgende letters in de groepen.</p>
+        <br>
+        <p>De referentietekst is bij voorkeur een tekst in dezelfde taal als de klare tekst.</p>
+        <p>In CryptTool is alleen een Engelse referentietekst beschikbaar.</p>
+        <p>Theoretisch gezien is dit niet optimaal.</p>
+        <p class="opgave">Opgave 3</p>
+        <p class="order">Plak de volgende tekst in het invoerbestand:</p>
+        <p class="indentLarge italic">Ocg kiucgm tyjrjppyunxsqvq gshynv sq anx fgznropxlmtdxa hkr bw ho</p>
+        <p class="indentLarge italic">xxbxscgmi ocnf mc zxmemfm msyp wn jbygbqkl uuesqx emqcgnvo thxv</p>
+        <p class="indentLarge italic">jgcw gshynv fmkvho fbs iol mjfvctd qor xnr kjyjfor tuw ockbxo pbs ix</p>
+        <p class="indentLarge italic">cxw evdtkid yeb ioplci umexq fckmib gl qid rtkpoyn pifsem qor wn</p>
+        <p class="indentLarge italic">zoplllsjenrnc tujkzxcxol oxpqcgb lor iamxabyi fyg qid atnwkpvrnpck</p>
+        <p class="indentLarge italic">eibabsjopxw kozxdvd bhxv rcm bivcvcibcg eex cxw oyjhv ekl wn lklw</p>
+        <p class="indentLarge italic">eex cxw pormnv fyg mi ujtai dcdbx ol wjebzbs iol krn fmepixq xnr</p>
+        <p class="indentLarge italic">lgckirmknrnc enxdck eex bx bposmnp gyta oyjhv ix pbs ivitjv clbshol bb</p>
+        <p class="indentLarge italic">ho jxcxop ojr nc vrnpckciuqm ci fggmix yeb ho qenydce tsbrxa mc btw ho</p>
+        <p class="indentLarge italic">rxtwd uhahd bx bposmnp jm ojeu yeb rybbp lopajevb</p>
+        <p class="order">Selecteer in menu 'Analysis' > 'Symmetric Encryption (classic)' > 'Cipher-text Only' > 'Vigenère'.</p>
+        <br>
+        <p>De sleutellengte en de sleutel worden automatisch bepaald (op de wijze zoals hierboven is toegelicht, waarbij correlatiecoëfficiënten worden berekend om de overeenkomsten tussen frequentieverdelingen te bepalen).</p>
+        <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+            <p>Wat is de sleutel en hoe luidt de klare tekst?</p>
+        </app-question> 
+        <app-answer [ans]="ans[0]">
+            <p>De sleutellengte is 5. De sleutel is KYTJE.</p>
+            <br>    
+            <p>De klare tekst luidt:</p>
+            <p class="indentLarge italic">Een bekend polyalfabetisch cijfer is het vigenerecijfer dat in de zestiende</p>
+            <p class="indentLarge italic">eeuw is bedacht door de fransman blaise vigenere voor zijn cijfer vormde</p>
+            <p class="indentLarge italic">hij een tableau met een alfabet als eerste rij en een alfabet als eerste kolom</p>
+            <p class="indentLarge italic">verder is het tableau gevuld met de verschillende alfabetten volgens het </p>
+            <p class="indentLarge italic">principe van het caesarcijfer vercijferen</p> 
+            <p class="indentLarge italic">een kolom aan de hand van een letter van de klare tekst en daarbij een rij </p>
+            <p class="indentLarge italic">volgens een bijbehorende letter van de sleutel waar kolom en rij elkaar </p>
+            <p class="indentLarge italic">snijden is de letter van de cijfertekst te vinden als de sleutel korter is dan </p>
+            <p class="indentLarge italic">de tekst wordt de sleutel zo vaak als nodig herhaald </p>          
+        </app-answer>  
+    </div>
+    
+    <app-tabs  prevPar="/paragraphs/par3" nextPar="/paragraphs/par32"></app-tabs>
+</div>

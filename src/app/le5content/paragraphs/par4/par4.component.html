@@ -1,0 +1,28 @@
+<div class="paragraphs">
+  <app-title title="4. AES"></app-title>
+  <div class="paragraphs-content">
+    <p>In deze sectie bekijkt u een animatie die de werking van AES illustreert.</p>
+    <p>AES is een afkorting van Advanced Encryption Standard</p>
+    <br>
+    <p>Op Wikipedia is uitgebreide achtergrond informatie te vinden</p>
+    <p><app-info-tag></app-info-tag> Zie <a href="https://nl.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> (wikipedia) </p>
+    <p><app-info-tag></app-info-tag> Zie <a href="https://nl.wikipedia.org/wiki/Rijndael_(cryptografie)">Rijndael cryptografie</a> (wikipedia)
+    </p>
+    
+    <p class="opgave">Opgave 5</p>    
+    <p class="order">Selecteer in menu 'Indiv. Procedures' > 'Visualization of Algorithms' > 'AES' > 'Rijndael Animation'.</p>
+    <p class="warning">Lees de instructies op de eerste pagina</p>
+    <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+      <p>Wat is de relatie tussen AES en Rijndael?</p>
+    </app-question> 
+    <app-answer [ans]="ans[0]">
+      <p>Het antwoord wordt gegegeven in Wikipedia op    
+        <a href="https://nl.wikipedia.org/wiki/Advanced_Encryption_Standard">AES</a> 
+        en 
+        <a href="https://nl.wikipedia.org/wiki/Rijndael_(cryptografie)">Rijndael cryptografie</a> 
+    </p>      
+    </app-answer>   
+  </div>
+  <app-tabs prevPar="/paragraphs/par3" nextPar="/paragraphs/par5"></app-tabs>
+</div>
+

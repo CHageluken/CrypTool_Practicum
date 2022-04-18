@@ -1,0 +1,32 @@
+.sidebar{
+  position: relative;
+
+  color: $color-primary-light;
+  color: green;
+  background-color: $color-primary-dark;
+  padding: 1rem;
+  &_ul {
+      list-style-type: none;
+    
+  }
+
+  &_inactive {
+    color: $color-primary-light;
+    border: none;
+    white-space: nowrap;
+    text-decoration: none;
+
+    
+  }
+  &_inactive:active, &_inactive:hover {
+    color: orangered;
+  } 
+  
+  &_active {
+    color: yellowgreen;
+    border: none;
+    white-space: nowrap;
+    text-decoration: none;
+    font-weight: bold;
+  }  
+}

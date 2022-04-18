@@ -1,0 +1,23 @@
+.tabs{
+  background-color: $color-primary-light;
+  display: grid;
+  grid-template-columns: repeat(3, fr);
+  justify-content: space-around;
+
+  &-prev {
+    grid-column: 1/2;
+    margin-left: 2rem;
+    justify-self: start;
+  }
+
+  &-home {
+    grid-column: 2/3;
+    justify-self: center;
+  }
+
+  &-next {
+    grid-column: 3/4;
+    margin-right: 2rem;
+    justify-self: end;
+  }
+}

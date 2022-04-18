@@ -1,0 +1,38 @@
+<div class="paragraphs">
+    <app-title title="7. Diffie-Hellman protocol"></app-title>
+    <div class="paragraphs-content"> 
+      <p><app-info-tag></app-info-tag> Zie <a href="https://nl.wikipedia.org/wiki/Diffie-Hellman-sleuteluitwisselingsprotocol">Diffie-Hellman protocol</a> (wikipedia)</p>     
+      <p>In deze opdracht gaan Alice en Bob een geheime sleutel uitwisselen met
+      behulp van het Diffie-Hellman protocol.</p>
+      <div class="columns">
+        <div class="columns-left">
+          <img src= "assets/images/diffie_hellman_flowchart.png" alt="signature" class="figure" >
+          <p class="figure"> Figuur 7  Flowchart voor Diffie Hellman protocol</p>     
+        </div>
+        <div class="columns-right">
+          <br>
+          <ol style="list-style-position: inside;">De hoofdlijnen zijn
+            <li>Bepaal priemgetal <em>p</em> en grondtal <em>g</em></li>
+            <li>Kies geheim getal, Alice kiest <em>a</em> en 
+              <p class="indentSmall"> Bob kiest <em>b</em></p></li>
+            <li>Alice berekent <em>A=g<sup>a</sup> (mod p)</em> en
+              <p class="indentSmall">Bob berekent <em>B=g<sup>b</sup> (mod p)</em></p></li>
+            <li><em>A</em> en <em>B</em> worden uitgewisseld</li>
+            <li>Alice en Bob berekenen <em>K</em> 
+              <p class="indentSmall">(gemeenschappelijk geheim getal)</p></li>
+          </ol>
+        </div>
+      </div>     
+
+      <p class="opgave">Opgave 8</p>
+      <p class="order">Selecteer in menu 'Indiv. Procedures' > 'Protocols' > ''Diffie-Hellman Demonstration...'.</p>
+      <p class="warning">Kies bij stap 1 om <em>g</em> en <em>p</em> te genereren</p>
+      <p class="warning">Kies bij stap 2 om <em>a</em> en <em>b</em> te genereren</p>
+      <router-outlet></router-outlet>
+      <p>
+        <app-info-tag></app-info-tag>
+        <a routerLink="diffiehellman">Diffie-Hellman protocol (theorie)</a>
+      </p>
+    </div>
+    <app-tabs prevPar="/paragraphs/par6"></app-tabs>
+  </div>

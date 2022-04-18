@@ -1,0 +1,103 @@
+p.order::before {
+  content: "\2299 \00A0 \00A0";
+  text-indent: -15px;
+  color: blue;
+}
+
+p.warning::before {
+  content: "\0021 \0021 \00A0 \00A0";
+  text-indent: -15px;
+  color: red;
+}
+
+p.lijst::before {
+  content: "\2013 \00A0 \00A0";
+  text-indent: -15px;
+}
+
+p.opgave  {
+  margin-top:1rem;
+  color:orangered;
+}
+p.indentLarge {
+  margin-left: 2rem;
+}
+
+p.indentSmall {
+  margin-left: 1rem;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.figure {
+  font-weight: bold;
+  margin-left: 2rem;
+  margin-bottom:1rem;
+}
+
+img.figure {
+  width: 50vw;
+  margin-top: 1rem;
+}
+
+p.lijst p.order p.warning {
+  text-indent: 10px;
+}
+
+.paragraphs {
+  display: grid;
+  grid-template-rows: 1fr, max-content, 1fr;
+  height: 95vh;
+  width: 70vw;
+   
+  background-color: $color-primary-light;
+  border-left: $border-dark;
+  align-items: center;
+  
+  @include respond(phone) {
+    border-top: $border-dark;
+    border-left: none;
+  }
+  &-title {
+    grid-row: 1/2;
+    padding-left:5rem;
+    padding-right: 5rem;
+  }
+  &-content {
+    height: 78vh;
+    width: 70vw;
+    padding-left:5rem;
+    padding-right: 5rem;
+    align-self: start;
+    overflow-y:auto;    
+  }
+
+  &-tabs {
+    grid-row: 3/4;
+    align-items: end;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 40rem 20rem;
+  justify-items: center;
+    
+  &-left {
+    grid-column: 1/2;
+    display: inline;
+    > img {      
+      width: 35rem;
+    }
+  }
+  &-right {
+    grid-column: 2/3;
+    display: inline;  
+
+    > img{
+      width: 10rem;
+    }
+  }
+}

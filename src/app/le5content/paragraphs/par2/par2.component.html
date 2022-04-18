@@ -1,0 +1,75 @@
+
+<div class="paragraphs">
+  <app-title title="2. Caesarcijfer"></app-title>
+  <div class="paragraphs-content">
+    <p>Bij een Caesar versleuteling  worden alle letters in de klare tekst verschoven met een constante factor (zie Figuur 1) </p>
+    <img src= "assets/images/le5_caesar.png" alt="caesar" class="figure" >
+    <p class="figure"> Figuur 1  Voorbeeld van een Caesar versleuteling</p>
+    <p>De Caesar sleutel kan in Cryptool bepaald worden door</p>
+    <p class="lijst">alle mogelijke cijfers uit te proberen (Opgave 3.1) of</p>
+    <p class="lijst">automatisch met behulp van een frequentieanalyse (Opgave 3.2)</p>   
+    <p class="opgave">Opgave 1</p>
+    <p class="order">Plak de volgende tekst in het invoerbestand:
+    <p class="indentLarge italic">Jk ioplkxzkqyz oy utzyzggt juux zukvgyyotm bgt jk Igkygxioplkx</p>
+    <p class="indentLarge italic">Kx nkklz kkt bkxyinaobotm vrggzymkbutjkt ubkx fky vuyozoky</p>
+    <p class="indentLarge italic">Kkt Igkygxioplkxzkqyz oy mksgqqkropq zk qxgqkt juux yosvkrckm grrk</p>
+    <p class="indentLarge italic">sumkropqk bkxyinaobotmkt aoz zk vxuhkxkt ul juux lxkwaktzokgtgreyk</p>
+    <p class="order">Selecteer in menu 'Encrypt/Decrypt’ > 'Symmetric (classic)' > 'Caesar / Rot-13...'. </p>
+    <br>
+    <p class="warning">Let op dat je iedere keer start met het invoerbestand.</p>
+    <p class="warning">Lees de “description” sectie in het panel!</p>
+    <p>Probeer de klare tekst te achterhalen door verschillende Caesarcijfers te proberen.</p>
+
+    <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+      <p>Hoe luidt de klare tekst?</p> 
+      <p class="indentSmall"> Verklaar uw antwoord.</p>
+    </app-question> 
+    <app-answer [ans]="ans[0]">          
+      <p>De klare tekst luidt als volgt (verkregen door verschuiving over 6 posities, waarbij de letter G uit de cijfertekst correspondeert met de letter A in de klare tekst):</p>
+      <p class="indentLarge italic">De cijfertekst is ontstaan door toepassing van de Caesarcijfer</p>
+      <p class="indentLarge italic">Er heeft een verschuiving plaatsgevonden over zes posities</p>
+      <p class="indentLarge italic">Een Caesarcijfertekst is gemakkelijk te kraken door simpelweg alle</p>
+      <p class="indentLarge italic">mogelijke verschuivingen uit te proberen of door frequentieanalyse</p>
+    </app-answer>  
+    
+    <p class="opgave">Opgave 2</p>
+    <p class="order">Gebruik de tekst uit Opgave 1</p>
+    <p class="order">Selecteer in menu 'Analysis' > ‘Symmetric 	Encryption (classic)' > 'Cipher-text Only' > 'Caesar'.</p>
+    <p class="order">Klik in het dialoogvenster 'Caesar Analysis' tweemaal op 'OK'</p>
+    <p class="order">Klik in het dialoogvenster 'Automatic Caesar Analysis' op 'Decrypt'</p>
+    <br>
+    
+    <p>a)	Vergelijk het resultaat met Opgave1</p>
+    <br>
+    <p class="order">Breng het venster met het histogram van de cijfertekst naar de voorgrond door er op te klikken.</p>
+    <p class="order">Doe hetzelfde voor het venster met het histogram van de cijfertekst.</p>
+    <p class="order">Resize beide vensters en zet ze naast elkaar zodat je ze kunt vergelijken.</p>
+    
+    
+    <app-question [questionNumber]="1" [ans]="ans[1]" (question)="answers($event)">
+      <p>b) Kunt u aan de hand van deze histogrammen inschatten welke sleutel waarschijnlijk is toegepast?</p>
+      <p class="indentSmall"> Verklaar uw antwoord.</p>
+    </app-question> 
+    <app-answer [ans]="ans[1]">          
+      <p>Het histogram laat zien dat de letter K het vaakste voorkomt in de cijfertekst. In doorsnee-Nederlandse en doorsnee-Engelse teksten komt de letter E het vaakste voor. Het ligt daarom voor de hand dat de letter E in de klare tekst correspondeert met de letter K in de cijfertekst, hetgeen een verschuiving over 6 posities is (hetgeen we ook al in opgave 5.1 hebben gevonden)</p>
+    </app-answer>
+    
+    <p class="order">Breng nu het venster “correlations of the distributions” naar de voorgrond.</p>
+    <p>
+      <app-info-tag></app-info-tag>
+      <a routerLink="correlatie">Correlatie tussen twee verdelingsfuncties (theorie)</a>
+    </p>
+    <router-outlet></router-outlet>
+    <app-question [questionNumber]="2" [ans]="ans[2]" (question)="answers($event)">
+      <p>c) Wat is de sleutel die uit deze grafiek van de correlatie tussen de verdelingen volgt?</p>
+      <p class="indentSmall"> Verklaar uw antwoord.</p>
+    </app-question> 
+    <app-answer [ans]="ans[2]">
+      <p>
+        De sleutel is de letter F. Dat betekent dat de klare tekst wordt verkregen door de cijfertekst over 6 posities te verschuiven.
+        (In de uitvoer wordt een opmerking over de key offset gemaakt. Dit heeft betrekking op de keuze om de nummering van de letters in het alfabet met 0 (A=0, B=1, ...) of 1 (A=1, B=2, ...) te beginnen. In dit geval is de key offset 1, zodat F=6.)  
+      </p>        
+    </app-answer>     
+  </div>
+  <app-tabs prevPar="/paragraphs/par1" nextPar="/paragraphs/par3"></app-tabs>
+</div>

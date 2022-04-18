@@ -1,0 +1,38 @@
+<div class="paragraphs">
+    <app-title title="5. RSA"></app-title>
+    <div class="paragraphs-content">
+        <p><app-info-tag></app-info-tag> Zie <a href="https://nl.wikipedia.org/wiki/RSA_(cryptografie)">RSA</a> (wikipedia)</p>
+        <p>De private key <em>d</em> kan worden gevonden door een zogenaamde factorisatie aanval op de publieke key parameters <em>N</em> en <em>e</em>.</p> 
+        <p>In de volgende opgave gaan we zo'n aanval uitvoeren om vervolgens een cijfertekst te ontcijferen.</p>
+        <p class="opgave">Opgave 6</p>
+        <p class="order">Selecteer in menu 'Encrypt/Decrypt' > 'Asymmetric' > 'RSA Demonstration'.</p>
+        <p class="order">Selecteer boven in het scherm de optie "For data encryptie ...."</p>
+        <p class="order">Vul de waarden voor <em>N</em> en <em>e</em> in</p>
+        <p class="indentLarge"><em>N</em> = 63978486879527143858831415041 (95 bits, 29 decimale getallen)</p>
+        <p class="indentLarge"><em>e</em> = 17579</p>
+        
+        <p class="order">Voer een factorisatie aanval uit ("Factorize RSA modulus") </p>
+        <p class="order">Druk op "continue" en vervolgens op "close"</p>
+        <br>
+        <p>Hiermee wordt de waarde voor de private key <em>d</em> dus gevonden.</p>
+        <p>Met de gevonden private key kan vervolgens een cijfertekst ontcijferd worden.</p>
+        <br>
+        <p class="order">Voer de volgende cijfertekst in:<p>
+        <p class="indentLarge">04300188087364980692761003044 #</p>
+        <p class="indentLarge">25077000091842927796005047882 #</p>
+        <p class="indentLarge">05217226089394915438677673104 #</p>
+        <p class="indentLarge">55229783041359598802855751984</p>
+        <p class="warning"> Neem het scheidingsteken (#) ook over</p>
+        
+        <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+            <p>Wat is de private key en hoe luidt de klare tekst?</p>
+        </app-question> 
+        <app-answer [ans]="ans[0]"> 
+             <p>De private key is:</p> 
+            <p class="indentLarge italic">10663687727232084624328285019</p> 
+            <p>De klare tekst luidt:</p> 
+            <p class="indentLarge italic">hartelijk welkom bij de cursus Security & IT </p>                 
+        </app-answer>  
+    </div>
+    <app-tabs prevPar="/paragraphs/par4" nextPar="/paragraphs/par6"></app-tabs>
+</div>

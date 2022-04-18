@@ -1,0 +1,35 @@
+.intro {
+  display: grid;
+  grid-template-rows: max-content;
+  align-content: center;
+  height: 95vh; 
+  width: 70vw;
+  color: $color-text-base;
+  margin: 0 auto;
+  
+  &-primary-main{
+    color: $color-primary-dark;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    margin-bottom: 1rem;
+  }
+
+  &-primary-sub{
+    display: inline-block;
+    font-size: 1.8rem;
+    letter-spacing: .13rem;
+    margin-bottom: 1rem;
+  }
+  
+  &-textbox{
+    display: block;
+    font-size: 1.8rem;
+    width: 100%;
+    margin-bottom: .5rem;
+  }  
+}
+
+
+

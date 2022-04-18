@@ -1,0 +1,17 @@
+<div class="question">
+    <div class="question-text">
+        <ng-content ></ng-content> 
+    </div>
+    <p>hrefvalue {{hrefValue}}</p>
+    <p>ans value {{ans}}</p>
+    <div class="question-button-open" *ngIf="ans">        
+        <button class="btn btsmall question-button-text" (click)="questionEmit(false)">
+            <i class="bi bi-caret-up" fill="currentColor"></i> Antwoord             
+        </button>
+    </div>       
+    <div class="question-button-open" *ngIf="!ans">
+        <button class="btn btsmall question-button-text" (click)="questionEmit(true)">
+            <i class="bi bi-caret-down" fill="currentColor"></i> Antwoord 
+        </button>
+    </div>                                              
+</div>

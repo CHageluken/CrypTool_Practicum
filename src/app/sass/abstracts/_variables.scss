@@ -1,0 +1,16 @@
+$color-primary-light:rgb(249, 247, 246);
+$color-primary: rgb(170, 170, 170);
+$color-primary-dark: #6D5D4B;
+$color-text-base: #101d2c;
+$color-button: #54483A;
+$color-text-button: rgb(54, 53, 53);
+
+// borders
+$border-light: 0.2rem solid $color-primary-light;
+$border-dark: 0.2rem solid $color-primary-dark;
+
+// responsive breakpoints
+$bp-largest: 75%;        // 1800px => 1rem = 12px  12/16
+$bp-large:  56.25%;      // 1200px => 1rem = 9px    9/16 = 62.5%
+$bp-medium: 50%;         //  900px => 1rem = 8px    8/16
+$bp-small: 37.5%;        //  300px => 1rem = 6px    6/16

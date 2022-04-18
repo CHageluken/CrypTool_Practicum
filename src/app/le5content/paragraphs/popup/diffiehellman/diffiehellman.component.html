@@ -1,0 +1,24 @@
+<div class="popup">
+    <div class="popup-content">   
+        <a href="paragraphs/par7" class="popup-close">
+            <i class="bi bi-x-square" fill="currentColor" ></i>
+        </a>
+        <h1>Diffie-Hellman protocol</h1>
+        <p>Alice berekent <em>K=B<sup>a</sup>(mod p) = (g<sup>b</sup>)<sup>a</sup>(mod p) = g<sup>a×b</sup>(mod p)</em>;</p>
+        <p> Bob berekent <em>K=A<sup>b</sup>(mod p) = (g<sup>a</sup>)<sup>b</sup>(mod p) = g<sup>a×b</sup> (mod p)</em>. </p>
+        <p>Alice en Bob berekenen dus beide dezelfde geheime sleutel <em>K</em>.</p>
+        <br>
+        <p> Stel dat Charlie als een man-in-the-middle de communicatie van Alice en Bob heeft onderschept. </p>
+        <p>Charlie kent dan weliswaar de waarde van <em>A</em> en <em>B</em>, maar daarmee heeft hij nog niet te sleutel te pakken.</p>
+        <p>Als hij de twee getallen vermenigvuldigt, vindt hij: <em>A×B=g<sup>a</sup>(mod p) × g<sup>b</sup>(mod p) </em>. Het resultaat is <em>g<sup>a+b</sup>(mod p)</em></p>
+        <p>en dat is heel iets anders dan het gezochte<em> K=g<sup>a×b</sup>(mod p)</em>. Wil Charlie als man-in-the-middle</p>
+        <p>de sleutel achterhalen, dan zal hij bijvoorbeeld het geheime getal <em>b</em> van Bob moeten zien te achterhalen </p>
+        <p>(of het geheime getal <em>a</em> van Alice).</p>
+        
+        <p>Aangezien priemgetal <em>p</em> en grondtal <em>g</em> openbaar zijn, moet Charlie een oplossing zien te vinden voor de</p>
+        <p>onbekende <em>b</em> in de vergelijking <em>B=g<sup>b</sup>(mod p)</em>. Charlie heeft dus een inverse van de modulaire exponentiële</p>
+        <p>functie nodig, de zogeheten discrete logaritmische functie, om <em>b=<sup>g</sup>log B (mod p)</em> te berekenen.</p>
+        <p>Een algoritme voor het berekenen van de discrete logaritme kan, als er sprake is van een grote modulus <em>p</em>,</p>
+        <p>niet in afzienbare tijd een oplossing vinden. Dat kan alleen bij een relatief kleine modulus.</p>
+    </div>
+</div>

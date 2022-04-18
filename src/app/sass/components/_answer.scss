@@ -1,0 +1,34 @@
+.answer {
+    width: 55rem;
+    display: grid;
+    grid-template-columns: 50rem 5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: $color-primary;
+    clear: both; 
+
+
+    &-text {
+        margin-right: 2rem;
+        grid-column: 1/2;                
+    }
+
+    &-button { 
+        background-color: $color-primary;
+        text-align: right;
+        &-open { 
+            grid-column: 2/3;
+            justify-self: center;
+         }
+        &-text {
+            color: green;
+            font-size: 1rem;
+            text-decoration: none;
+            display: block;
+            
+            &:hover {
+                color: red;
+            }
+        }   
+    }
+}

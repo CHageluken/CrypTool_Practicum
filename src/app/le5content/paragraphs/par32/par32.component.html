@@ -1,0 +1,49 @@
+<div class="paragraphs">
+    <app-title title="3.2. Enigma codeermachine"></app-title>
+    
+    <div class="paragraphs-content">       
+        <div class="columns">
+            <div class="columns-left">
+                <p>Tijdens de tweede wereldoorlog maakten diverse onderdelen van het Duitse leger gebruik van de Enigma codeermachines om berichten te vercijferen. (Enigma is Grieks voor raadsel.) Engelse en Poolse codekrakers slaagden er tijdens de oorlog diverse malen in om radioberichten te ontcijferen die met Enigma vercijferd waren. Dit had een grote impact op het verloop van de oorlog.</p>
+                <p>Dit maakt een Vigenèrecijfer kwetsbaar voor frequentieanalyse.</p>
+                <br>
+                <p>De Enigma codeermachine maakt gebruik van poly-alfabetische substitutie en kan gebruikt worden voor zowel het vercijferen van klare teksten als het ontcijferen van cijferteksten.</p>
+                <p>De configuratie van een Enigma-machine bestaat uit Engelse plug-board en rotors. De rotors representeren een bepaald substitutie-alfabet. De configuratie van rotors wordt bepaald door het aantal rotors en de startpositie en draaisnelheid van iedere van de rotors.</p>                
+            </div>
+            <div class="columns-right">
+                <img src= "assets/images/enigma.jpg" alt="enigma">
+                <p class="figure"> Figuur 3 	Enigma machine</p>
+            </div>
+        </div>
+        <br>
+        <p><app-info-tag></app-info-tag>Zie <a href= "https://nl.wikipedia.org/wiki/Enigma_(codeermachine)"> Enigma machine</a> (wikipedia)</p>
+       
+        <img src= "assets/images/enigma_tekst.png" alt="enigma tekst" class="figure" >
+        <p class="figure"> Figuur 4  Werking van de Enigma machine</p>
+        <router-outlet></router-outlet>
+        <p>
+            <app-info-tag></app-info-tag>
+            <a routerLink="enigma">Korte uitleg van de werking (film)</a>
+        </p>
+
+        <p class="opgave">Opgave 4</p>
+        <p> In deze opdracht gebruikt u een simulatie van Enigma om een cijfertekst te ontcijferen.</p>
+        <p class="order">Selecteer in menu 'Indiv. Procedures' > 'Visualization of Algorithms' > 'Enigma...'.</p>
+        <p class="order">Klik op de pagina om door te gaan naar de volgende pagina.</p>
+        <p class="order">In het midden van het simulatievenster staat de tekst '? HELP'.</p>
+        <p class="order">Klik op de tekst '? HELP' en bestudeer de help-pagina.</p>
+        <br>
+        <p>In de help sectie van CrypTool wordt een voorbeeld uitgewerkt. Hierbij wordt het plug-board geconfigureerd zodat de letters A en B en de letters F en X worden omgewisseld, en de rotors I, II en III worden in starttoestand F, E en S geplaatst.</p>
+        <br>
+        <p>Herhaal dit voorbeeld met de volgende cijfertekst:</p>
+        <p class="indentLarge">ORTPYWTGASDDBFROKZJJTNGTCQZAJJOGCZFKGAO</p>    
+        <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+            <p>Hoe luidt de klare tekst?</p>
+        </app-question> 
+        <app-answer [ans]="ans[0]"> 
+            <p>De klare tekst luidt:</p> 
+            <p class="indentLarge italic">LISTENVERYCAREFULLYIWILLSAYTHISONLYONCE </p>                 
+        </app-answer>  
+    </div>
+    <app-tabs  prevPar="/paragraphs/par31" nextPar="/paragraphs/par4" ></app-tabs>
+</div>
