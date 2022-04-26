@@ -6,10 +6,9 @@ import { ShowAnswer } from '../../share/showanswer';
   templateUrl: './par5.component.html'
 })
 export class Par5Component {
-  ans: boolean[] = [false, false, false];
+  ans: boolean[] = [false];
   
   answers(data: ShowAnswer) {
     this.ans[data.questionNr] = data.show;
   }
-
 }

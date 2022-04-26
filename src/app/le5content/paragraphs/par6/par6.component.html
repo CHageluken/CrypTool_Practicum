@@ -33,12 +33,21 @@
       <p class="order">Selecteer in menu 'Digital Signature/PKI' >
         'Signature Demonstration (Signature Generation)...'.</p>
       <p class="warning">Kies bij stap 3 de cryptografische hashfunctie SHA-1</p>
+
+      <p><app-info-tag></app-info-tag> Zie <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> (wikipedia)</p>
+        
       <p class="warning">Laat bij stap 4 de hash code berekenen</p>
       <p class="warning">Laat bij stap 4 de RSA key berekenen. Laat de hiervoor benodigde priemgetallen genereren</p>
       <p class="warning">Let bij stap 5 goed op welke velden verplicht zijn</p>
       <br>
       <p>b) Verifieer de digitale handtekening</p>
       <p class="order">Selecteer in menu 'Digital Signature/PKI' > 'Verify Signature...'</p>
+      <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+        <p>c) Zou je SHA-1 willen gebruiken voor digitale handtekeningen?</p>
+      </app-question> 
+      <app-answer [ans]="ans[0]"> 
+          <p>Nee, Wikipedia (<a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a>) suggereert dat SHA-1 nodig vervangen moet worden voor digitale handtekeningen.</p>                 
+      </app-answer> 
     </div>
     <app-tabs prevPar="/paragraphs/par5" nextPar="/paragraphs/par7"></app-tabs>
   </div>

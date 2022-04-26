@@ -33,6 +33,15 @@
         <app-info-tag></app-info-tag>
         <a routerLink="diffiehellman">Diffie-Hellman protocol (theorie)</a>
       </p>
+      <app-question [questionNumber]="0" [ans]="ans[0]" (question)="answers($event)">
+        <p>Kun je de geheime code breken als je <em>A</em> en <em>B</em> kent?</p>
+      </app-question> 
+      <app-answer [ans]="ans[0]"> 
+          <p>Nee, zie theorie 
+            <a routerLink="diffiehellman">Diffie-Hellman protocol</a>
+          </p>               
+      </app-answer> 
+
     </div>
     <app-tabs prevPar="/paragraphs/par6"></app-tabs>
   </div>
