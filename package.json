@@ -9,8 +9,9 @@
     "test": "ng test",
     "lint": "eslint -c .eslintrc.js --ext .ts ",
     "e2e": "ng e2e",
+    "devserver": "angular-http-server --path ./dist/le5_practicum -p 4500",
     "compile:sass": "node-sass src/app/sass/main.scss src/app/css/styles.css -w",
-    "start": "npm-run-all --parallel watch serve compile:sass"
+    "start": "npm-run-all --parallel watch serve compile:sass devserver"
   },
   "private": true,
   "dependencies": {
@@ -23,8 +24,10 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "angular-http-server": "^1.10.0",
     "bootstrap-icons": "^1.7.2",
     "dayjs": "^1.10.7",
+    "http-server": "^14.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
