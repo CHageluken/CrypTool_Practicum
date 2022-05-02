@@ -8,8 +8,7 @@ import { ShowAnswer } from '../showanswer';
 export class QuestionComponent {
   @Input() ans: boolean;
   @Input() questionNumber;
-  hrefValue: string;
-
+  
   @Output() question: EventEmitter<ShowAnswer> = new EventEmitter();
   
   questionEmit(val) {  
