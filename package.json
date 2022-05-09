@@ -11,7 +11,8 @@
     "e2e": "ng e2e",
     "devserver": "angular-http-server --path ./dist/le5_practicum -p 4500",
     "compile:sass": "node-sass src/app/sass/main.scss src/app/css/styles.css -w",
-    "start": "npm-run-all --parallel watch serve compile:sass devserver"
+    "start": "npm-run-all --parallel watch serve compile:sass devserver",
+    "docs": "ng build --output-path docs --base-href /le5_practicum/"
   },
   "private": true,
   "dependencies": {
