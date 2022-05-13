@@ -52,7 +52,7 @@ html{
 
   justify-items: center;
   background-color: $color-primary-light;
-  font-size: 1 rem;
+  font-size: 1rem;
 
   @include respond(phone) {
     grid-template-columns: 98vw;
