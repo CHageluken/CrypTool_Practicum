@@ -1,6 +1,6 @@
 <div class="sidebar">
   <ul class="sidebar_ul">          
-    <li *ngFor="let item of paragraphs" class=""sidebar-content>
+    <li *ngFor="let item of paragraphs" class="sidebar-content">
       <span *ngIf = "currentlink === item.link">
         <a class="sidebar_active" 
            routerLink={{item.link}} 
